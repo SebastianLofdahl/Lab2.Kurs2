@@ -147,3 +147,11 @@ FROM avdelning av
 SELECT av.namn AS avdelning, a.fornamn, a.efternamn
 FROM avdelning av
          LEFT JOIN anstalld a ON a.avdelning_id = av.avdelning_id;
+
+-- Regelkontroller (ska om jag gjort rätt resultera i felmeddelande.)
+# INSERT INTO passerkort (kortnummer, utfardandedatum, giltigt_till, anstalld_id)
+# VALUES ('K-9999', '2025-01-01', '2028-01-01', 1);
+# INSERT INTO anstalld (fornamn, efternamn, epost, anstallningsdatum, avdelning_id)
+# VALUES ('Test', 'Testsson', 'test@foretaget.se', '2025-01-01', 99);
+# INSERT INTO anstalld_kompetens (anstalld_id, kompetens_id)
+# VALUES (1, 1);
