@@ -1,3 +1,9 @@
+## Innehåll i repot
+
+- _sql/laboration2.sql:_ databas, användare, tabeller, testdata och SQL-frågor (lösenord ersatt med "placeholder")
+- _src/:_ Java-projektet med modell-klasserna i "model" och "Main"
+- _bilder/:_ skärmdumpar och datamodellen
+
 ## Entiteter och Attribut:
 
 - Avdelning: namn, kontorsort.
@@ -18,8 +24,6 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
   kompetens_id), vilket hindrar samma koppling två gånger.
 
 ## Model till tabell (kul rim):
-
-## Från modell till tabeller
 
 - Alla tabeller har en primärnyckel "id" av typen INT med AUTO_INCREMENT, så att varje rad får ett unikt värde utan att
   jag behöver komma på ett.
@@ -67,20 +71,24 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 ![Resultat av G1](bilder/g1.png)
 
 - Första SQL frågan: få fram datatabell om anställda med avdelning.
+- "Avdelningar utan anställda syns inte (INNER JOIN)."
 
 ![Resultat av G2](bilder/g2.png)
 
 - Andra SQL frågan: få fram datatabell om alla avdelningar med anställda (även tomma).
+- "Inköp finns med trots att den saknar anställda. Namnkolumnerna visar NULL."
 
 ## VG Delen:
 
 ![Resultat av VG1](bilder/vg1.png)
 
 - Första VG SQL frågan: få fram datatabell om anställda med avdelning och eventuella kortnummer.
+- "Anställda utan passerkort syns med NULL i kortnummer."
 
 ![Resultat av VG2](bilder/vg2.png)
 
 - Andra VG SQL frågan: få fram datatabell om avdelningar med anställda och eventuella kortnummer.
+- "Anställda utan passerkort syns med NULL i kortnummer."
 
 ![Resultat av VG3](bilder/vg3.png)
 ![Resultat av VG3](bilder/vg3_1.png)
@@ -93,7 +101,7 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 - En anställd kan ge flera rader eftersom varje kompetens blir en egen rad i resultatet. Anna har tre kompetenser och
   ger därför tre rader, där hennes uppgifter, avdelningen och kortet upprepas på varje rad.
 
-- Johan saknar passerkort och Sara saknar kompetenser, men båda syns ändå. Eftersom jag utgår från ""anstalld" och
+- Johan saknar passerkort och Sara saknar kompetenser, men båda syns ändå. Eftersom jag utgår från "anstalld" och
   använder LEFT JOIN behålls anställda även när det inte finns någon matchande rad i "passerkort" eller
   "anstalld_kompetens". De saknade kolumnerna blir NULL. Med INNER JOIN hade de försvunnit.
 
