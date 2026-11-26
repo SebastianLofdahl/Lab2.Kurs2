@@ -103,15 +103,25 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 - Fjärde VG SQL frågan: INNER JOIN mot LEFT JOIN: Inner join hittar bara resultat som matchar, medan Left tar de som
   matchar samt även de med eventuellt null värde från den vänstra tabellen.
 
-![Regelkontroll VG4](bilder/vg4_regelkontroll.png)
-![Regelkontroll VG4](bilder/vg4_regelkontroll1.png)
-![Regelkontroll VG4](bilder/vg4_regelkontroll2.png)
-
-- Regelkontroller och förväntade felmeddelanden för VG4:
+- Regelkontroller för VG4:
   kontroll att en anställd inte kan få två passerkort och inte kan ha en avdelning som inte finns.
 - Avdelningen "Inköp" försvinner med INNER JOIN, eftersom den inte har några anställda och därför inte matchar någon rad
   i "anstalld". Med LEFT JOIN finns den kvar eftersom alla rader från vänster tabell (avdelning) är kvar. Kolumnerna för
   förnamn och efternamn visar NULL på den raden, eftersom det inte finns någon anställd att hämta dem från.
+
+## Kontroll av reglerna
+
+![Dubblettkort](bilder/regelkontroll.png)
+
+- Ett andra passerkort till samma anställd nekas, eftersom "anstalld_id" i "passerkort" är UNIQUE.
+
+![Okänd avdelning](bilder/regelkontroll1.png)
+
+- En anställd med en avdelning som inte finns nekas av främmande nyckeln.
+
+![Dubblett i kopplingstabellen](bilder/regelkontroll2.png)
+
+- Samma kompetens kan inte kopplas till samma anställd två gånger, på grund av den sammansatta primärnyckeln.
 
 ## Fiktiv testdata:
 
