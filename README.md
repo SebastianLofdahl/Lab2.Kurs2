@@ -80,8 +80,7 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 ![Resultat av G2](bilder/g2.png)
 
 - Andra SQL frågan: få fram datatabell om alla avdelningar med anställda (även tomma).
-- "Inköp syns trots att den saknar anställda, med NULL i både namn- och kortnummerkolumnerna. Anställda utan passerkort
-  syns med NULL i kortnummer."
+- "Inköp syns trots att den saknar anställda, med NULL i förnamn och efternamn (LEFT JOIN)."
 
 ## VG Delen:
 
@@ -93,7 +92,8 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 ![Resultat av VG2](bilder/vg2.png)
 
 - Andra VG SQL frågan: få fram datatabell om avdelningar med anställda och eventuella kortnummer.
-- "Anställda utan passerkort syns med NULL i kortnummer."
+- "Inköp syns trots att den saknar anställda, med NULL i namn- och kortnummerkolumnerna. Anställda utan passerkort syns
+  med NULL i kortnummer."
 
 ![Resultat av VG3](bilder/vg3.png)
 ![Resultat av VG3](bilder/vg3_1.png)
@@ -115,6 +115,9 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 
 - Fjärde VG SQL frågan: INNER JOIN mot LEFT JOIN: Inner join hittar bara resultat som matchar, medan Left tar de som
   matchar samt även de med eventuellt null värde från den vänstra tabellen.
+- Avdelningen "Inköp" försvinner med INNER JOIN, eftersom den inte har några anställda och därför inte matchar någon rad
+  i "anstalld". Med LEFT JOIN finns den kvar eftersom alla rader från vänster tabell (avdelning) behålls. Kolumnerna för
+  förnamn och efternamn visar NULL på den raden, eftersom det inte finns någon anställd att hämta dem från.
 
 ## Kontroll av reglerna
 
