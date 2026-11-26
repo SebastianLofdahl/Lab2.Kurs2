@@ -70,8 +70,8 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 
 - Tredje VG prompten: få fram datatabell om en anställds samlade uppgifter.
 - (byte av id: 1 = Anna (ovan, 4 = Johan utan kort (nedan 1), 5 = Sara utan kompetenser (nedan2)))
-  ![Resultat av VG3](bilder/vg3.png)
-  ![Resultat av VG3](bilder/vg3.png)
+  ![Resultat av VG3](bilder/vg3_opt4.png)
+  ![Resultat av VG3](bilder/vg3_opt5.png)
 
 ![Resultat av VG4](bilder/vg4_inner.png)
 ![Resultat av VG4](bilder/vg4_left.png)
