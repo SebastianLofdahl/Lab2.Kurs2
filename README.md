@@ -44,6 +44,10 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 
 - Skapandet av min databas och user från root.
 
+![Current User](bilder/current_user.png)
+
+- Screenshot för SQL frågan om current user.
+
 ## Tabellskapande:
 
 ![Skapande av tabeller](bilder/create_table_anstalld.png)
@@ -76,7 +80,8 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 ![Resultat av G2](bilder/g2.png)
 
 - Andra SQL frågan: få fram datatabell om alla avdelningar med anställda (även tomma).
-- "Inköp finns med trots att den saknar anställda. Namnkolumnerna visar NULL."
+- "Inköp syns trots att den saknar anställda, med NULL i både namn- och kortnummerkolumnerna. Anställda utan passerkort
+  syns med NULL i kortnummer."
 
 ## VG Delen:
 
@@ -110,12 +115,6 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 
 - Fjärde VG SQL frågan: INNER JOIN mot LEFT JOIN: Inner join hittar bara resultat som matchar, medan Left tar de som
   matchar samt även de med eventuellt null värde från den vänstra tabellen.
-
-- Regelkontroller för VG4:
-  kontroll att en anställd inte kan få två passerkort och inte kan ha en avdelning som inte finns.
-- Avdelningen "Inköp" försvinner med INNER JOIN, eftersom den inte har några anställda och därför inte matchar någon rad
-  i "anstalld". Med LEFT JOIN finns den kvar eftersom alla rader från vänster tabell (avdelning) är kvar. Kolumnerna för
-  förnamn och efternamn visar NULL på den raden, eftersom det inte finns någon anställd att hämta dem från.
 
 ## Kontroll av reglerna
 
