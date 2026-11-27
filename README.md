@@ -56,7 +56,7 @@ _(Dessa pilar var jobbigt att lista ut hur man gör i detta)_
 
 ![Skapande av tabeller](bilder/create_table_anstalld_kompetens.png)
 
-- Skapande av relationstabell för att länka flera primära nycklar.
+- Skapande av kopplingstabell för att länka flera primära nycklar.
 
 ![Skapande av tabeller](bilder/create_table_avdelning.png)
 
